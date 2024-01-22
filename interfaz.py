@@ -67,25 +67,17 @@ class Interfaz:
         tipo_text.place(x=400, y=85)
 
     def crear_entry(self):
+        # Esto son los valores de la funcion de x'
+        self.entry_a1 = Entry(self.ventana, width=3, font=("Arial", 12))
+        self.entry_a1.place(x=65, y=45)
+        self.entry_b1 = Entry(self.ventana, width=3, font=("Arial", 12))
+        self.entry_b1.place(x=135, y=45)
 
-        # Esto son los valores de la funcion de  x'
-        entry_a1 = Entry(self.ventana, width=3, font=("Arial", 12))
-        entry_a1.place(x=65, y=45)
-        entry_b1 = Entry(self.ventana, width=3, font=("Arial", 12))
-        entry_b1.place(x=135, y=45)
-
-        # Esto son los valores de la funcion de  y'
-        entry_a2 = Entry(self.ventana, width=3, font=("Arial", 12))
-        entry_a2.place(x=65, y=80)
-        entry_b2 = Entry(self.ventana, width=3, font=("Arial", 12))
-        entry_b2.place(x=135, y=80)
-
-    def crear_button(self):
-        button_aceptar = Button(self.ventana, text="Graficar", command=self.get_data)
-        button_aceptar.place(x=50, y=125)
-
-        button_limpiar = Button(self.ventana, text="Limpiar", command= self.clean_entrys)
-        button_limpiar.place(x=115, y=125)
+        # Esto son los valores de la funcion de y'
+        self.entry_a2 = Entry(self.ventana, width=3, font=("Arial", 12))
+        self.entry_a2.place(x=65, y=80)
+        self.entry_b2 = Entry(self.ventana, width=3, font=("Arial", 12))
+        self.entry_b2.place(x=135, y=80)
 
     def get_data(self):
         global a1, b1, a2, b2
@@ -105,7 +97,13 @@ class Interfaz:
         self.entry_b1.delete(0, 'end')
         self.entry_b2.delete(0, 'end')
     
+    def crear_button(self):
+        button_aceptar = Button(self.ventana, text="Graficar", command=self.get_data)
+        button_aceptar.place(x=50, y=125)
 
+        button_limpiar = Button(self.ventana, text="Limpiar", command= self.clean_entrys)
+        button_limpiar.place(x=115, y=125)
+        
     def crear_grafica(self):
         print("Futura grafica")
 

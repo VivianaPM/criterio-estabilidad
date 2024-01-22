@@ -69,15 +69,15 @@ class Interfaz:
     def crear_entry(self):
 
         # Esto son los valores de la funcion de  x'
-        entry_a1 = tk.Entry(self.ventana, width=3, font=("Arial", 12))
+        entry_a1 = Entry(self.ventana, width=3, font=("Arial", 12))
         entry_a1.place(x=65, y=45)
-        entry_b1 = tk.Entry(self.ventana, width=3, font=("Arial", 12))
+        entry_b1 = Entry(self.ventana, width=3, font=("Arial", 12))
         entry_b1.place(x=135, y=45)
 
         # Esto son los valores de la funcion de  y'
-        entry_a2 = tk.Entry(self.ventana, width=3, font=("Arial", 12))
+        entry_a2 = Entry(self.ventana, width=3, font=("Arial", 12))
         entry_a2.place(x=65, y=80)
-        entry_b2 = tk.Entry(self.ventana, width=3, font=("Arial", 12))
+        entry_b2 = Entry(self.ventana, width=3, font=("Arial", 12))
         entry_b2.place(x=135, y=80)
 
     def crear_button(self):
@@ -94,11 +94,11 @@ class Interfaz:
             b1 = float(self.entry_b1.get())
             a2 = float(self.entry_a2.get())
             b2 = float(self.entry_b2.get())
-           # ventana.destroy()  # Cerrar la ventana de ingreso de datos
+
             especificarfuncion(a1, b1, a2, b2, self.solucion_text, self.tipo_text)  # Llamar a la función y pasar los valores ingresados
         except ValueError:
             showerror("Error", "Ingresa valores numéricos válidos.")
-
+# resolver lo de guardar y
     def clean_entrys(self):
         self.entry_a1.delete(0, 'end')
         self.entry_a2.delete(0, 'end')
